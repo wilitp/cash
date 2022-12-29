@@ -1,0 +1,17 @@
+#root {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+.bills {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
