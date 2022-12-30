@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 
+const max = (a, b) => a > b ? a : b
+
 function App() {
   const [billTypes, setBillTypes] = useState([
     { type: 1000, amount: 0, included: true },
@@ -18,7 +20,7 @@ function App() {
   const changeBillAmount = (billType, val) => {
     const newBillTypes = billTypes.map(el => {
       if (billType === el.type) {
-        return { ...el, amount: val };
+        return { ...el, amount: max(val, 0)  };
       }
       return el;
     });
