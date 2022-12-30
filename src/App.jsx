@@ -65,7 +65,7 @@ function App() {
   }
 
   // Sumo de esta forma rara el offset para que no joda si es un string jeje
-  const total = billTypes.reduce((sum, { type, amount, included }) => included ? sum + type * amount : sum, 0) - (-offset); 
+  const total = billTypes.reduce((sum, { type, amount, included }) => included ? sum + type * amount : sum, 0) - offset; 
 
   return (
     <div className="App">
@@ -77,7 +77,7 @@ function App() {
             <button onClick={addBillType}>Agregar</button>
           </div>
           <div>
-            <h3>Diferencia previa</h3>
+            <h3>Diferencia previa (real - sistema)</h3>
             <input placeholder="Diferencia" onChange={(e) => setOffset(e.target.value)} value={offset} type="number" />
           </div>
           <div className="bills">
